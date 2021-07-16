@@ -1,0 +1,8 @@
+/.cache
+/www
+/node_modules
+/.DS_Store
+.parcel-cache
+android/
+.cache/
+plugins/

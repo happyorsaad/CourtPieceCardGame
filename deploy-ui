@@ -1,0 +1,5 @@
+checkout main branch
+run build: npm run build-ui:prod
+commit and push to heroku remote: git push client main
+static deploy : heroku static:deploy -a courtpiece
+

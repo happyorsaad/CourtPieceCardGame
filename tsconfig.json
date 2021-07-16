@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"target": "ES6",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"decorators-legacy": true
+	},
+	"include": [
+		"src/**/*",
+		"node_modules/phaser3-rex-plugins-types"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
