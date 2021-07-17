@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "A multiplayer playing card game popular in the indian subcontinent",
   "scripts": {
-    "start-cordova:browser": "npm run build-ui:dev && cordova run browser",
-    "start-cordova:android": "npm run build-ui:dev && cordova run android",
     "cleanup": "rm -rf .cache dist www",
-    "start-client": "NODE_ENV=development parcel src/client/index.html -p 8001 --open --dist-dir www",
-    "start-client:prod": "NODE_ENV=production parcel src/client/index.html -p 8000 --open --dist-dir www",
+    "start-client": "NODE_ENV=development parcel src/client/index.html -p 8001 --open --dist-dir www --no-cache",
+    "start-client:prod": "NODE_ENV=production parcel src/client/index.html -p 8001 --open --dist-dir www",
     "build-ui:dev": "NODE_ENV=development parcel build src/client/index.html --dist-dir www --no-cache --no-optimize --no-content-hash",
     "build-ui:prod": "NODE_ENV=production parcel build src/client/index.html --dist-dir www --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1",

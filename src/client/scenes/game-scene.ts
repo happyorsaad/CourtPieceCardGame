@@ -130,6 +130,7 @@ export class GameScene extends SceneBase {
   }
 
   update() {
+    console.log("update");
     this.inputControls.update();
     this.FSM.update(10);
   }

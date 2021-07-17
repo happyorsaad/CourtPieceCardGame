@@ -68,17 +68,12 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
     createContainer: true,
   },
   scale: {
-    mode: Phaser.Scale.FIT,
     parent: "game",
     autoCenter: Phaser.Scale.CENTER_BOTH,
+    mode: Phaser.Scale.FIT,
     width: GAME_WIDTH,
     height: GAME_HEIGHT,
   },
-  // callbacks: {
-  //   postBoot: function (game) {
-  //     game.plugins.get("SceneWatcher").watchAll();
-  //   },
-  // },
   plugins: {
     scene: [
       {
@@ -98,7 +93,7 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
       },
     ],
     global: [
-      // { key: "SceneWatcher", plugin: SceneWatcherPlugin, start: true },
+      { key: "SceneWatcher", plugin: SceneWatcherPlugin, start: true },
       {
         key: "rexAnchor",
         plugin: AnchorPlugin,

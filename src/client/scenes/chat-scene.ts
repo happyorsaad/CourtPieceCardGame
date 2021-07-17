@@ -38,6 +38,7 @@ export class ChatScene extends SceneBase {
   }
 
   preload() {
+    console.log("preload: chat scene");
     this.width = this.gameWidth * 0.3;
     this.height = this.gameHeight * 0.8;
     this.scene.bringToTop();
@@ -50,13 +51,10 @@ export class ChatScene extends SceneBase {
         };
       }
     );
-
-    this.events.on("pause", () => {
-      this.scene.get("ChatScene").scene.stop();
-    });
   }
 
   create() {
+    console.log("create: chat scene");
     this.createChatArea();
     this.createChatInput();
 
@@ -118,7 +116,9 @@ export class ChatScene extends SceneBase {
       .setInteractive()
       .setVisible(false);
 
-    this.input.setDraggable(this.chatArea);
+    console.log("input", this.input);
+
+    this.input?.setDraggable(this.chatArea);
 
     this.chatArea.on("drag", (pointer: any) => {
       this.sizer.x = pointer.x;

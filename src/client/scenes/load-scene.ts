@@ -9,6 +9,7 @@ export class LoadScene extends SceneBase {
   }
 
   preload(): void {
+    this.scale.lockOrientation(Phaser.Scale.LANDSCAPE);
     console.log("load-scene");
 
     this.bounds = {
